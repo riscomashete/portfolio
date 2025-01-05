@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    user-select: none;
+}
+
+.link {
+    padding-top: 1rem;
+}
+
+/* nav {
+    opacity: 90%;
+} */
+/* CSS for the blurred navbar */
+/* nav {
+    backdrop-filter: blur(5px); /* Adjust the blur radius as needed */
+    /* -webkit-backdrop-filter: blur(10px); For Safari */
+    /* background-color: rgba(255, 255, 255, 0.7); Semi-transparent background
+} */ 
+
+section{
+    padding: 60xp 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.box {
+    border: 1px solid rgb(203, 200, 199);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(35, 174, 212);
+    padding: 2rem;
+    text-align: center;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    background-color: rgba(255, 255, 255, 0.881);
+}
+
+.box img {
+    width: 15rem;
+}
+
+.orr {
+    background-color: orangered;
+    color: white;
+}
+
+.btn:hover {
+    background-color: orangered;
+    color: white;
+}
+
+#span1 {
+    color: orangered;
+}
+
+#css {
+    width: 12rem;
+    margin-top: 1rem;
+}
+
+#risco {
+    width: 20rem;
+    height: 20rem;
+    /* margin-left: 60%;
+    margin-top: 8rem;
+    border-radius: 50%;
+    margin-bottom: 117px; */
+    border: 1px solid orangered;
+    padding: 1rem;
+}
+
+#intro {
+    padding-bottom: 20rem;
+    padding-top: 4rem;
+    background-color: rgba(245, 245, 245, 0.324);
+}
+
+#skills {
+    background-color: rgba(170, 226, 237, 0.5);
+    padding-top: 4rem;
+}
+
+#about {
+    background-color: rgb(240, 238, 250);
+    padding-bottom: 3.7rem;
+    padding-top: 4rem;
+}
+
+#about p {
+    text-align: justify;
+}
+
+#contact {
+    background-color: rgb(174, 215, 251);
+    padding-top: 4rem;
+}
+
+footer {
+    background-color: #d1d1d1;
+}
+
+.social {
+    text-align: center;
+    padding: 10px;
+}
+
+.social a {
+    font-size: 20px;
+    color: inherit;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    
+}
+
+.social .whatsapp {
+    color: green;
+}
+.social .linkedin {
+    color: blue;
+}
+
+.social a:hover {
+    border-radius: 30%;
+    border:1.5px solid rgb(240, 238, 250);
+}
+
+footer ul {
+    list-style: none;
+    text-align: center;
+}
+
+footer ul a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer ul a li {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+
+@media (max-width: 425px) {
+    #risco {
+        width: 15rem;
+        height: 15rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+}
