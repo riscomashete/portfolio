@@ -45,7 +45,6 @@ section{
 
 .box:hover {
     box-shadow: 0 0 20px orangered;
-    scale: 1.1;
     transition: all;
     transition-duration: 1s;
 
@@ -62,8 +61,6 @@ section{
 
 .orr:hover {
     scale: 1.1;
-    background-color: #ccc;
-    color: orangered;
 }
 .btn:hover {
     background-color: orangered;
