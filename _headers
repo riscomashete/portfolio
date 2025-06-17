@@ -1,26 +1,9 @@
 /*
-
-  # Prevent Clickjacking
   X-Frame-Options: SAMEORIGIN
-
-  # Enforce HTTPS (HSTS)
-  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-
-  # Prevent MIME Sniffing
   X-Content-Type-Options: nosniff
-
-  # Content Security Policy (basic safe version)
-  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'
-
-  # Control Referrer Behavior
   Referrer-Policy: strict-origin-when-cross-origin
-
-  # Block unwanted browser features
   Permissions-Policy: geolocation=(), microphone=(), camera=()
-
-  # CORS Policy (restrict to your domain)
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   Access-Control-Allow-Origin: https://www.riscomashete.com
-
-  # Disable client-side caching of dynamic data
   Cache-Control: no-store
-
