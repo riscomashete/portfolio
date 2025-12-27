@@ -3,29 +3,14 @@
 <head>
 <!-- RedBreach Analytics -->
 <script>
-(function() {
-  var id = "RB-584475";
-  var endpoint = "https://nkgyiuqtbmorcfgnvhla.supabase.co/functions/v1/track";
-  var sid = localStorage.getItem("rb_s");
-  if (!sid) {
-    sid = Math.random().toString(36).substring(2);
-    localStorage.setItem("rb_s", sid);
-  }
-  fetch(endpoint, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      project_id: id,
-      url: window.location.href,
-      title: document.title,
-      referrer: document.referrer || "direct",
-      device: /Mobi|Android/i.test(navigator.userAgent) ? "mobile" : "desktop",
-      screen: window.screen.width + "x" + window.screen.height,
-      session_id: sid,
-      timestamp: new Date().toISOString()
-    })
-  }).catch(function(){});
-})();
+(function(w,d,s,i){
+  var f=d.getElementsByTagName(s)[0],j=d.createElement(s);
+  j.async=true;j.src='https://nkgyiuqtbmorcfgnvhla.supabase.co/functions/v1/track';
+  w.rb_id=i;
+  var sid=localStorage.getItem('rb_s')||(Math.random().toString(36).slice(2));
+  localStorage.setItem('rb_s',sid);
+  fetch(j.src,{method:'POST',body:JSON.stringify({project_id:i,url:location.href,referrer:d.referrer||'direct',device:/Mobi|Android/i.test(navigator.userAgent)?'mobile':'desktop',session_id:sid})}).catch(function(){});
+})(window,document,'script','RB-584475');
 </script>
 
 <!-- Google tag (gtag.js) -->
