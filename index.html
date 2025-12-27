@@ -3,13 +3,29 @@
 <head>
 <!-- RedBreach Analytics -->
 <script>
-(function(i,d,w){
-  w.rb_config={id:"RB-413503"};
-  var s=d.createElement('script');
-  s.async=1;
-  s.innerHTML='(function(){var c=window.rb_config;if(!c||!c.id)return;var sId=localStorage.getItem("rb_s");if(!sId){sId=Math.random().toString(36).substring(2);localStorage.setItem("rb_s",sId)}var p={project_id_text:c.id,url:location.href,referrer:document.referrer||"direct",device:/Mobi|Android/i.test(navigator.userAgent)?"mobile":"desktop",session_id:sId,timestamp:new Date().toISOString()};fetch("https://nkgyiuqtbmorcfgnvhla.supabase.co/rest/v1/events",{method:"POST",headers:{"Content-Type":"application/json","apikey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5rZ3lpdXF0Ym1vcmNmZ252aGxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY3NTI5MzUsImV4cCI6MjA4MjMyODkzNX0.nUw4op-a_MG-BwwFqnTUaI6ppT6CIi63YaA6PcR6Ltk","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5rZ3lpdXF0Ym1vcmNmZ252aGxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY3NTI5MzUsImV4cCI6MjA4MjMyODkzNX0.nUw4op-a_MG-BwwFqnTUaI6ppT6CIi63YaA6PcR6Ltk"},body:JSON.stringify(p),mode:"cors"}).catch(function(){})})();';
-  d.head.appendChild(s);
-})(window,document,window);
+(function() {
+  var id = "RB-413503";
+  var endpoint = "https://nkgyiuqtbmorcfgnvhla.supabase.co/functions/v1/track";
+  var sid = localStorage.getItem("rb_s");
+  if (!sid) {
+    sid = Math.random().toString(36).substring(2);
+    localStorage.setItem("rb_s", sid);
+  }
+  fetch(endpoint, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      project_id: id,
+      url: window.location.href,
+      title: document.title,
+      referrer: document.referrer || "direct",
+      device: /Mobi|Android/i.test(navigator.userAgent) ? "mobile" : "desktop",
+      screen: window.screen.width + "x" + window.screen.height,
+      session_id: sid,
+      timestamp: new Date().toISOString()
+    })
+  }).catch(function(){});
+})();
 </script>
 
 <!-- Google tag (gtag.js) -->
