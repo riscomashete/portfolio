@@ -8,14 +8,16 @@
         var a, c = document.createElement("script"), f = window.frameElement;
 
         c.id = "CleverCoreLoader98815";
-        c.src = "https://scripts.cleverwebserver.com/bde6db42db68939cf6436e12c9fb25f2.js";
+        c.src = "scripts.cleverwebserver.com";
 
         c.async = !0;
         c.type = "text/javascript";
         c.setAttribute("data-target", window.name || (f && f.getAttribute("id")));
-        c.setAttribute("data-callback", "put-your-callback-function-here");
-        c.setAttribute("data-callback-url-click", "put-your-click-macro-here");
-        c.setAttribute("data-callback-url-view", "put-your-view-macro-here");
+        
+        // Corrected attributes for 2026 tracking
+        c.setAttribute("data-callback", "cleverAdCallback");
+        c.setAttribute("data-callback-url-click", "%%CLICK_URL_UNESC%%");
+        c.setAttribute("data-callback-url-view", "%%VIEW_URL_UNESC%%%%CACHEBUSTER%%");
 
         try {
             a = parent.document.getElementsByTagName("script")[0] || document.getElementsByTagName("script")[0];
@@ -26,8 +28,14 @@
         a || (a = document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]);
         a.parentNode.insertBefore(c, a);
     })(document, window);
+
+    // This local function logs ad events for debugging
+    function cleverAdCallback(event) {
+        console.log("Clever Ad Event:", event);
+    }
 /* ]]> */
 </script>
+
 
 <!-- RedBreach Analytics -->
 <script>
