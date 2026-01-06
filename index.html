@@ -1,42 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<script data-cfasync="false" type="text/javascript" id="clever-core">
-/* <![CDATA[ */
-    (function (document, window) {
-        var a, c = document.createElement("script"), f = window.frameElement;
-
-        c.id = "CleverCoreLoader98815";
-        c.src = "scripts.cleverwebserver.com";
-
-        c.async = !0;
-        c.type = "text/javascript";
-        c.setAttribute("data-target", window.name || (f && f.getAttribute("id")));
-        
-        // Corrected attributes for 2026 tracking
-        c.setAttribute("data-callback", "cleverAdCallback");
-        c.setAttribute("data-callback-url-click", "%%CLICK_URL_UNESC%%");
-        c.setAttribute("data-callback-url-view", "%%VIEW_URL_UNESC%%%%CACHEBUSTER%%");
-
-        try {
-            a = parent.document.getElementsByTagName("script")[0] || document.getElementsByTagName("script")[0];
-        } catch (e) {
-            a = !1;
-        }
-
-        a || (a = document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]);
-        a.parentNode.insertBefore(c, a);
-    })(document, window);
-
-    // This local function logs ad events for debugging
-    function cleverAdCallback(event) {
-        console.log("Clever Ad Event:", event);
-    }
-/* ]]> */
-</script>
-
-
 <!-- RedBreach Analytics -->
 <script>
 (function(i,d,w){
@@ -412,5 +376,41 @@
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9248405ca0c74c869fc008b348b9643d"}'></script>
     <!-- End Cloudflare Web Analytics -->
+
+<script data-cfasync="false" type="text/javascript" id="clever-core">
+/* <![CDATA[ */
+    (function (document, window) {
+        var a, c = document.createElement("script"), f = window.frameElement;
+
+        c.id = "CleverCoreLoader98815";
+        c.src = "scripts.cleverwebserver.com";
+
+        c.async = !0;
+        c.type = "text/javascript";
+        c.setAttribute("data-target", window.name || (f && f.getAttribute("id")));
+        
+        // Corrected attributes for 2026 tracking
+        c.setAttribute("data-callback", "cleverAdCallback");
+        c.setAttribute("data-callback-url-click", "%%CLICK_URL_UNESC%%");
+        c.setAttribute("data-callback-url-view", "%%VIEW_URL_UNESC%%%%CACHEBUSTER%%");
+
+        try {
+            a = parent.document.getElementsByTagName("script")[0] || document.getElementsByTagName("script")[0];
+        } catch (e) {
+            a = !1;
+        }
+
+        a || (a = document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]);
+        a.parentNode.insertBefore(c, a);
+    })(document, window);
+
+    // This local function logs ad events for debugging
+    function cleverAdCallback(event) {
+        console.log("Clever Ad Event:", event);
+    }
+/* ]]> */
+</script>
+
+
 </body>
 </html>
